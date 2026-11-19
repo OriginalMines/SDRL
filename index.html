@@ -287,21 +287,6 @@ p{margin:0}
 }
 .partner:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#f8cfa8}
 
-.pl{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px;letter-spacing:-.01em;line-height:1}
-.pl__mark{
-  width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
-  font-size:13px;font-weight:800;color:#fff;flex-shrink:0;
-}
-.pl--reliance{color:#0d3c8c}
-.pl--reliance .pl__mark{background:#0d3c8c}
-.pl--delhivery{color:#ee2e24}
-.pl--delhivery .pl__mark{background:#ee2e24}
-.pl--dmart{color:#00963f}
-.pl--dmart .pl__mark{background:#00963f}
-.pl--blinkit{color:#111;background:#f8cb46;padding:9px 16px;border-radius:10px;font-size:16px}
-.pl--blinkit .pl__mark{background:#111;color:#f8cb46}
-.pl--zepto{color:#6c2bd9}
-.pl--zepto .pl__mark{background:#6c2bd9}
 
 /* ============================================================
    NETWORK / ADDRESS
@@ -414,7 +399,6 @@ p{margin:0}
   .services{grid-template-columns:1fr}
   .partners-grid{grid-template-columns:1fr 1fr;gap:12px}
   .partner{min-height:96px;padding:12px}
-  .pl{font-size:15px}
   .rail > *{flex:0 0 85%}
   .contact-form{grid-template-columns:1fr}
   .footer__grid{grid-template-columns:1fr}
@@ -455,6 +439,14 @@ html{scroll-padding-top:92px}
   .wa-float{right:16px;bottom:16px;width:52px;height:52px}
   .to-top{right:20px;bottom:80px;width:44px;height:44px}
   .btn-row .btn{flex:1 1 100%}
+}
+.partner img{display:block;width:auto;height:auto;max-width:86%;max-height:58px;object-fit:contain}
+.partner--sq img{max-height:76px}
+.partner--sym img{max-height:68px}
+@media (max-width:640px){
+  .partner img{max-width:90%;max-height:46px}
+  .partner--sq img{max-height:62px}
+  .partner--sym img{max-height:56px}
 }
 </style>
 </head>
@@ -769,38 +761,28 @@ html{scroll-padding-top:92px}
     <div class="partners-grid">
 
       <!-- RELIANCE -->
-      <div class="partner">
-        <div class="pl pl--reliance">
-          <span class="pl__mark">R</span> Reliance
-        </div>
+      <div class="partner partner--sym">
+        <img src="partners/reliance.png" alt="Reliance" width="140" height="130" loading="lazy">
       </div>
 
       <!-- DELHIVERY -->
       <div class="partner">
-        <div class="pl pl--delhivery">
-          <span class="pl__mark">D</span> Delhivery
-        </div>
+        <img src="partners/delhivery.png" alt="Delhivery" width="640" height="102" loading="lazy">
       </div>
 
       <!-- DMART -->
       <div class="partner">
-        <div class="pl pl--dmart">
-          <span class="pl__mark">D</span> DMart
-        </div>
+        <img src="partners/dmart.png" alt="DMart" width="533" height="123" loading="lazy">
       </div>
 
       <!-- BLINKIT -->
-      <div class="partner">
-        <div class="pl pl--blinkit">
-          <span class="pl__mark">B</span> blinkit
-        </div>
+      <div class="partner partner--sq">
+        <img src="partners/blinkit.png" alt="Blinkit" width="320" height="320" loading="lazy">
       </div>
 
       <!-- ZEPTO -->
-      <div class="partner">
-        <div class="pl pl--zepto">
-          <span class="pl__mark">Z</span> zepto
-        </div>
+      <div class="partner partner--sq">
+        <img src="partners/zepto.png" alt="Zepto" width="320" height="320" loading="lazy">
       </div>
 
     </div>
